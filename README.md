@@ -21,56 +21,58 @@ Launch the instance and download the key pair.
 Step 2: Connect to EC2 Instance
 Use the key pair to SSH into your EC2 instance:
 
-sh
-Copy code
+Run this command
+
 ssh -i "your-key-pair.pem" ubuntu@your-ec2-public-dns
 Step 3: Install Node.js
 Install Node Version Manager (nvm):
-sh
-Copy code
+
+Run this command
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
 Install the latest LTS version of Node.js:
-sh
-Copy code
+
+Run this command
+
 nvm install --lts
 Step 4: Clone the Repository
 Clone your Node.js application repository to the EC2 instance:
 
-sh
-Copy code
+Run this command
+
 git clone git@github.com:mrmonarch20/Node.js-deployment-on-AWS.git
 cd Node.js-deployment-on-AWS
 Step 5: Install Dependencies
 Install the required Node.js dependencies:
 
-sh
-Copy code
+Run this command
+
 npm install
 Step 6: Start the Application
 Start your Node.js application:
 
-sh
-Copy code
+Run this command
+
 npm start
 Step 7: Set Up SSH Key for GitHub (if needed)
 Generate a new SSH key:
 
-sh
-Copy code
+Run this command
+
 ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
 Follow the prompts to save the key (default location is fine).
 
 Add the SSH key to the ssh-agent:
 
-sh
-Copy code
+Run this command
+
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 Copy the SSH key to your clipboard:
 
-sh
-Copy code
+Run this command
+
 cat ~/.ssh/id_rsa.pub
 Add the SSH key to your GitHub account:
 
