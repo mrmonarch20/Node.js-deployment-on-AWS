@@ -5,20 +5,21 @@ This repository contains the necessary steps and scripts to deploy a Node.js app
 Prerequisites
 Before you begin, ensure you have the following:
 
-An AWS account
-AWS CLI installed and configured
-An EC2 instance running Ubuntu
-Node.js installed on your EC2 instance
-SSH access to your EC2 instance
-Setup
-Step 1: Launch EC2 Instance
+* An AWS account
+* AWS CLI installed and configured
+* An EC2 instance running Ubuntu
+* Node.js installed on your EC2 instance
+* SSH access to your EC2 instance
+  Setup:
+
+•Step 1: Launch EC2 Instance
 Log in to the AWS Management Console.
 Navigate to EC2 Dashboard and click "Launch Instance".
-Select an Amazon Machine Image (AMI). We recommend using Ubuntu.
-Choose an instance type (e.g., t2.micro for free tier).
-Configure the instance details, add storage, and configure security group to allow SSH (port 22).
-Launch the instance and download the key pair.
-Step 2: Connect to EC2 Instance
+->Select an Amazon Machine Image (AMI). We recommend using Ubuntu.
+->Choose an instance type (e.g., t2.micro for free tier).
+->Configure the instance details, add storage, and configure security group to allow SSH (port 22).
+->Launch the instance and download the key pair.
+•Step 2: Connect to EC2 Instance
 Use the key pair to SSH into your EC2 instance:
 
 Run this command
@@ -41,7 +42,7 @@ Clone your Node.js application repository to the EC2 instance:
 
 Run this command
 
-git clone git@github.com:mrmonarch20/Node.js-deployment-on-AWS.git
+ gitclonegit@github.com:mrmonarch20/Node.js-deployment-on-AWS.git
 cd Node.js-deployment-on-AWS
 Step 5: Install Dependencies
 Install the required Node.js dependencies:
